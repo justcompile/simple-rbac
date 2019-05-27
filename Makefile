@@ -18,7 +18,7 @@ test:
 .PHONY: cover
 cover:
 		@go test -v -covermode=count -coverprofile=coverage.out
-		@${GOPATH}/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+		@${GOPATH}/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken ${COVERALLS_TOKEN}
 
 .PHONY: cover-html
 cover-html:
